@@ -58,16 +58,6 @@ FrontDesk works seamlessly with APIs hosted at:
 
 ## **🌟 Key Features**
 
--**React Components**: Built with modular, reusable components.
--**Framer Motion**: Smooth animations and transitions for a dynamic user experience.
--**Three.js (Fiber, Drei)**: 3D visualization for an enhanced interface.
--**TypeScript**: Strong typing for safer and scalable development.
--**Bootstrap**: Styled components for responsive design.
--**JWT Authentication**: Secure and stateless user authentication.
--**Axios**: Simplified HTTP requests.
-
-## **📚 Additional Resources**
-
 - **React Components**: Built with modular, reusable components.
 - **Framer Motion**: Smooth animations and transitions for a dynamic user experience.
 - **Three.js (Fiber, Drei)**: 3D visualization for an enhanced interface.
@@ -75,3 +65,12 @@ FrontDesk works seamlessly with APIs hosted at:
 - **Bootstrap**: Styled components for responsive design.
 - **JWT Authentication**: Secure and stateless user authentication.
 - **Axios**: Simplified HTTP requests.
+
+## **📚 Additional Resources**
+
+- React Documentation
+- TypeScript Documentation
+- Framer Motion Guide
+- React-Three Documentation
+- Axios Documentation
+- Vercel Deployment Guide
