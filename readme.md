@@ -11,6 +11,7 @@ Clone the repository to your local machine:
 
 ```bash
 git clone <repository-url>
+``` 
 
 ### **2. Install Dependencies**
 
@@ -19,6 +20,7 @@ Navigate to the project folder and install all required packages:
 ```bash
 cd frontDesk  
 npm install  
+```
 
 ### **3. Start the Application**
 
@@ -26,6 +28,7 @@ Run the application locally:
 
 ```bash
 npm start  
+```
 
 By default, the app will start at http://localhost:3000.
 
@@ -35,6 +38,7 @@ To create a production build, run:
 
 ```bash
 npm run build  
+```
 
 The optimized build will be available in the /build folder.
 
