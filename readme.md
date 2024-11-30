@@ -51,9 +51,9 @@ axios.post('https://<backend-api-url>/api/saveContacts', data, {
 ### **3. Backend API Integration**
 FrontDesk works seamlessly with APIs hosted at:
 
--**Login API**: https://<backend-api-url>/api/login
--**Save Contacts API**: https://<backend-api-url>/api/saveContacts
--**Other Endpoints**: Replace <backend-api-url> with your backend's URL.
+- **Login API**: https://<backend-api-url>/api/login
+- **Save Contacts API**: https://<backend-api-url>/api/saveContacts
+- **Other Endpoints**: Replace <backend-api-url> with your backend's URL.
 
 
 ## **🌟 Key Features**
