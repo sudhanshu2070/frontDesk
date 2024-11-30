@@ -66,7 +66,6 @@ FrontDesk works seamlessly with APIs hosted at:
 - **JWT Authentication**: Secure and stateless user authentication.
 - **Axios**: Simplified HTTP requests.
 
-## **📚 Additional Resources**
 
 ## 📚 Additional Resources
 
