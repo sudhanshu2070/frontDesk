@@ -1,5 +1,5 @@
 {
-  "homepage": "https://sudhanshu2070.github.io/front-desk",
+  "homepage": "https://sudhanshu2070.github.io/frontDesk",
   "name": "front-desk",
   "version": "1.0.1",
   "description": "Frontend of the project",
@@ -40,12 +40,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

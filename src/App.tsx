@@ -16,7 +16,7 @@ const data = new Array(390).fill(0).map((d, id) => ({ id }));
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <Router basename='/frontDesk'>
       <AnimatedRoutes />
     </Router>
   );
