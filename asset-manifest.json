@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/front-desk/static/css/main.487b0154.css",
+    "main.js": "/front-desk/static/js/main.dad9d370.js",
+    "static/js/845.69a5502f.chunk.js": "/front-desk/static/js/845.69a5502f.chunk.js",
+    "static/media/bootstrap-icons.woff?": "/front-desk/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/front-desk/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "index.html": "/front-desk/index.html",
+    "main.487b0154.css.map": "/front-desk/static/css/main.487b0154.css.map",
+    "main.dad9d370.js.map": "/front-desk/static/js/main.dad9d370.js.map",
+    "845.69a5502f.chunk.js.map": "/front-desk/static/js/845.69a5502f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.487b0154.css",
+    "static/js/main.dad9d370.js"
+  ]
+}
