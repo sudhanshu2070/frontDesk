@@ -68,9 +68,11 @@ FrontDesk works seamlessly with APIs hosted at:
 
 ## **📚 Additional Resources**
 
-- React Documentation
-- TypeScript Documentation
-- Framer Motion Guide
-- React-Three Documentation
-- Axios Documentation
-- Vercel Deployment Guide
+## 📚 Additional Resources
+
+- [React Documentation](https://reactjs.org/docs/getting-started.html)  
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/)  
+- [Framer Motion Guide](https://www.framer.com/motion/)  
+- [React-Three Documentation](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)  
+- [Axios Documentation](https://axios-http.com/docs/intro)  
+- [Vercel Deployment Guide](https://vercel.com/docs)  
