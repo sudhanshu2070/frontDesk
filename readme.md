@@ -5,7 +5,8 @@ A modern frontend solution built with **React** and a robust stack of technologi
 
 ## 🛠️ **Steps to Get Started**  
 
-### **1. Clone the Repository**  
+### **1. Clone the Repository**
+
 Clone the repository to your local machine:  
 
 git clone <repository-url>
@@ -50,26 +51,26 @@ axios.post('https://<backend-api-url>/api/saveContacts', data, {
 ### **3. Backend API Integration**
 FrontDesk works seamlessly with APIs hosted at:
 
-Login API: https://<backend-api-url>/api/login
-Save Contacts API: https://<backend-api-url>/api/saveContacts
-Other Endpoints: Replace <backend-api-url> with your backend's URL.
+-Login API: https://<backend-api-url>/api/login
+-Save Contacts API: https://<backend-api-url>/api/saveContacts
+-Other Endpoints: Replace <backend-api-url> with your backend's URL.
 
 
 ## **🌟 Key Features**
 
-React Components: Built with modular, reusable components.
-Framer Motion: Smooth animations and transitions for a dynamic user experience.
-Three.js (Fiber, Drei): 3D visualization for an enhanced interface.
-TypeScript: Strong typing for safer and scalable development.
-Bootstrap: Styled components for responsive design.
-JWT Authentication: Secure and stateless user authentication.
-Axios: Simplified HTTP requests.
+-React Components: Built with modular, reusable components.
+-Framer Motion: Smooth animations and transitions for a dynamic user experience.
+-Three.js (Fiber, Drei): 3D visualization for an enhanced interface.
+-TypeScript: Strong typing for safer and scalable development.
+-Bootstrap: Styled components for responsive design.
+-JWT Authentication: Secure and stateless user authentication.
+-Axios: Simplified HTTP requests.
 
 ## **📚 Additional Resources**
 
-React Documentation
-TypeScript Documentation
-Framer Motion Guide
-React-Three Documentation
-Axios Documentation
-Vercel Deployment Guide
+-React Documentation
+-TypeScript Documentation
+-Framer Motion Guide
+-React-Three Documentation
+-Axios Documentation
+-Vercel Deployment Guide
