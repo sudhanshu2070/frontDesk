@@ -1,0 +1,117 @@
+.page-background {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Ensures background image stays in place during scrolling */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.add-contact-container {
+  max-width: 28%;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background-size: cover; /* Ensures the image covers the entire form */
+  background-position: center;
+  color: #333;
+  position: relative; /* Positioning for the container */
+  z-index: 1; /* Ensures form content is above the background */
+}
+
+.add-contact-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3; /* Control the opacity of the background image */
+  z-index: -1; /* Places the background image behind the form content */
+  border-radius: 10px; /* Matches the form's border-radius */
+}
+
+.add-contact-title {
+  font-family: 'Papyrus';
+  margin-top: 0.5rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+  font-size: 2.35rem;
+  color: #0b0705; /*#020403; different shade of black*/
+  font-weight:1000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.add-contact-input-group {
+  flex:1;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.add-contact-input-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.add-contact-button {
+  font-family: 'Libre Baskerville', serif; /* Apply Libre Baskerville font */
+  text-shadow: .07em .07em 0 #FF3743, .1em .1em 0 white;
+  text-transform: capitalize;
+  letter-spacing: .1em; 
+
+  padding: 1rem;
+  background-color: rgba(4, 2, 0, 0.4); /* Adjusted to add transparency */
+  color: white;
+  border: 1.5px solid #737474;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-contact-button:hover {
+  font-family: 'Libre Baskerville', serif; /* Apply Libre Baskerville font */
+  text-shadow: none;
+  letter-spacing: none;
+  font-size: 1.25rem;
+  background-color: #AFAFAF;
+  color: #020403;
+  transform: scale(1.03);
+}
+
+.add-contact-input-row {
+  display: flex;
+  gap: 0.5rem; /* Space between inputs */
+  margin-bottom: 0.5 rem;
+}
+
+.add-contact-success-message-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.add-contact-success-message {
+  background-color: #AFAFAF; /* Green */
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  opacity: 1;
+  animation: fade-in-out 3s ease-in-out;
+}

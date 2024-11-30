@@ -1,0 +1,341 @@
+.slider-container {
+  /*background-image: url('/../react-phonebook/public/images/tim-navis.jpg'); to access the "public" folder */
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.slider {
+  margin-top: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  perspective: 1000px; /* for the 3D effect */
+}
+
+.card p {
+  margin: 2.5%;
+  padding: 0.5%;
+}
+
+.card {
+  width: 26.5%;
+  height: 75vh;
+  max-height: 75vh;
+  border-radius: 7px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  padding: 30px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0.6; /* Default opacity for non-active cards */
+  text-align: left;
+  z-index: 1;
+
+  margin: 0 7px; /* horizontal space between cards */
+  margin-bottom: 15px; 
+  background-size: cover;
+  background-position: center;
+  align-items: left;
+}
+
+.card.active {
+  transform: scale(1.05) translateZ(0);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  opacity: 1; /* Full opacity for the active card */
+  z-index: 3; /* On top */
+  background-size: cover;
+  background-position: center;
+  border: 2.8px solid #362222;
+}
+
+.card.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6%;
+  height: 100%;
+  box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.6), /* Dark inner shadow for depth */
+              inset -3px -3px 8px rgba(255, 255, 255, 0.3); /* Light inner shadow for highlight */
+  pointer-events: none; /* Ensures it doesn’t affect interaction */
+}
+
+.card.prev, .card.next {
+  transform: scale(0.85) translateZ(-50px);
+  z-index: 2; /* On top */
+  background-size: cover;
+  background-position: center;
+  /* Overlay for background image */
+  position: relative;
+  color: #f0f0f0;
+  border: 2.5px solid #48CFCB;
+}
+
+.card.prev{
+    transform: scale(0.75) rotateY(10deg) rotateZ(-7deg); 
+}
+
+.card.prev:hover{
+  transform: scale(0.9);
+} 
+
+.card.prev:hover ~ .nav-button.left {
+  display: none;
+}
+
+.card.next{
+  transform: scale(0.75) rotateY(-10deg) rotateZ(7deg); 
+}
+
+.card.next:hover {
+transform: scale(0.9);
+}
+
+.card-header-contact-detail {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+
+.card-header-contact-detail h2 {
+  align-items: center;
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.header-text-prev {
+  font-family: 'Garamond'; 
+  font-size: 17px;
+  letter-spacing: 0.6px; 
+  font-style: italic;
+  text-shadow: 1px 1px 2px #FF005C, 0 0 1em #810034, 0 0 0.2em #26001B;
+  margin-right: 10px;
+}
+
+.header-text-active {
+  font-family: 'Garamond';
+  font-style: italic;
+  font-weight: bold;
+  font-size: 19px;
+  letter-spacing: 0.7px; 
+  text-shadow: 1px 1px 2px #000000, 0 0 1em #97FEED, 0 0 0.2em #F6F1E9;
+  margin-right: 10px;
+}
+
+.header-text-next {
+  font-family: 'Garamond'; 
+  font-size: 17px;
+  letter-spacing: 0.6px; 
+  font-style: italic;
+  text-shadow: 1px 1px 2px #FF005C, 0 0 1em #810034, 0 0 0.2em #26001B;
+  margin-right: 10px;
+}
+
+.content-text-prev {
+  font-family: 'Bradley Hand ITC', cursive; 
+  font-size: 17px;
+  text-shadow: 1px 1px 2px #1A3636, 0 0 1em #40534C, 0 0 0.2em #677D6A;
+  text-align: center;
+}
+
+.content-text-active {
+  /* font-family: 'Garamond';  */
+  font-family: 'Mistral', cursive; 
+  /* font-family: 'Ink Free', cursive;  */
+  font-weight: 200;
+  font-size: 19px;
+  letter-spacing: 0.6px; 
+  color:#000000;
+  text-align: center;
+
+  background: linear-gradient(45deg, #212529, #343a40, #495057);
+  filter: brightness(2.5); 
+  -webkit-background-clip: text; 
+  background-clip: text;
+}
+
+.content-text-next {
+  font-family: 'Bradley Hand ITC', cursive; 
+  font-size: 17px;
+  text-shadow: 1px 1px 2px #1A3636, 0 0 1em #40534C, 0 0 0.2em #677D6A;
+  text-align: center;
+}
+
+.nav-button {
+  position: absolute;
+  width: 5%;
+  height: 8%; 
+  line-height: 60%;
+  top: 55%;
+  transform: translateY(-50%);
+  background: repeating-linear-gradient(to right, #8DECB4, #7ED7C1 3px);
+  opacity: 0.8;
+  color: #1C1427;
+  border: 2px solid #31363F; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 15px rgba(83, 162, 190, 0.5); 
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 7.5px;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 1;
+  }
+
+.nav-button.left {
+  left: 46px;
+  transform: rotateZ(-8deg);
+}
+
+.nav-button.left:hover {
+  border: 2px solid #F6F5F2;
+  background: repeating-linear-gradient(to right, #3C2A21, #1A120B 3px);
+  color: #F3F8FF;
+  transform: scale(1.1) rotateZ(-8deg);
+}
+
+.nav-button.right {
+  right: 46px;
+  transform: rotateZ(8deg);
+}
+
+.nav-button.right:hover {
+  border: 2px solid #F6F5F2;
+  background: repeating-linear-gradient(to right, #3C2A21, #1A120B 3px);
+  color: #F3F8FF;
+  transform: scale(1.1) rotateZ(8deg);
+}
+
+.card-header-contact-detail {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 0 10px; 
+  position: relative; 
+}
+
+.card-header-contact-detail h2 {
+  margin: 0 auto; 
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotateX(10deg);
+  text-align: center;
+  font-size: 1.4rem; 
+  font-weight: bold; 
+  letter-spacing: 1.5px; 
+  font-family: 'Goudy Stout'; 
+  /* font-family: 'Broadway';  */
+  text-shadow: 
+  1px 1px 2px rgba(0, 0, 0, 0.3),
+  0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.delete-icon{
+  cursor: pointer;
+  color: #e0e0e0;
+  font-size: 1.90rem; 
+  position: relative;
+  margin-left: auto;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 2px #191919, 0 0 1em #3E3232, 0 0 0.2em #222831;
+  z-index: 1;
+}
+
+.delete-icon-active {
+  cursor: pointer;
+  color: #660000;
+  font-size: 1.90rem; 
+  position: relative;
+  margin-left: auto;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 2px #191919, 0 0 1em #3E3232, 0 0 0.2em #222831;
+  z-index: 1;
+}
+
+.delete-icon-active:hover {
+  color: #e5dcc5;
+  transform: scale(1.5);
+}
+
+.delete-icon:hover {
+  color: #758694;
+  transform: scale(1.5);
+}
+
+/* Success message container */
+.success-message-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Success message box */
+.success-message {
+  background: repeating-linear-gradient(to right, #4c4c47, #969a97 3px);
+  color: #fff; 
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  font-weight: bold;
+  animation: slideIn 0.5s ease-out, fadeOut 0.5s ease-out 2.5s;
+}
+
+.contact-details-title {
+  position: absolute;
+  top: 20px; 
+  left: 20px; 
+  color: #e5dcc5;
+  z-index: 100; 
+  margin: 0;
+  padding: 10px;
+  border-radius: 7px;
+  background: repeating-linear-gradient(to bottom, #4c4c47, #969a97 3px);
+  border-radius: 8px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+
+  font-family: 'Papyrus'; 
+  font-size: 27px; 
+  font-style: italic; 
+  letter-spacing: 1px;
+}
+
+.quote-text {
+  overflow-y: auto; 
+}
+
+.quote-text::-webkit-scrollbar {
+  width: 5px; /* Scrollbar width */
+}
+
+.quote-text::-webkit-scrollbar-thumb {
+  background-color: #191919; /* Scrollbar color */
+  border-radius: 5px;
+}
+
+.quote-text::-webkit-scrollbar-thumb:hover {
+  background: repeating-linear-gradient(to top, #C73659, #A91D3A 3px);
+}
