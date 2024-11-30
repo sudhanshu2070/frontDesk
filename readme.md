@@ -9,12 +9,14 @@ A modern frontend solution built with **React** and a robust stack of technologi
 
 Clone the repository to your local machine:  
 
+```bash
 git clone <repository-url>
 
 ### **2. Install Dependencies**
 
 Navigate to the project folder and install all required packages:
 
+```bash
 cd frontDesk  
 npm install  
 
@@ -22,14 +24,18 @@ npm install
 
 Run the application locally:
 
+```bash
 npm start  
+
 By default, the app will start at http://localhost:3000.
 
 ### **4. Build for Production**
 
 To create a production build, run:
 
+```bash
 npm run build  
+
 The optimized build will be available in the /build folder.
 
 
