@@ -24,3 +24,11 @@ yarn-error.log*
 
 #security reasons
 .env
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore dist directory (for compiled/transpiled files)
+dist/
+/dist
+.vercel
