@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import AddContact from './components/AddContact/AddContact';
 import ContactDetails from './components/ContactDetail/ContactDetails';
@@ -28,6 +29,7 @@ const AnimatedRoutes: React.FC = () => {
 
   return (
       <AnimatePresence>
+        <Navbar/>
         <Routes location={location} key={location.pathname}>
           <Route path="/home" element={<Transitions> <Home /></Transitions> }/>
           <Route path="/add-contact" element={ <Transitions> <AddContact /> </Transitions> } />
