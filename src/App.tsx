@@ -11,6 +11,8 @@ import ThreePointVis from './components/ThreePointVis/ThreePointVis/ThreePointVi
 import './components/ThreePointVis/ThreePointVis/ThreePointVis.css';
 import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
+import ThemeSelector from './components/ThemeSelector/ThemeSelector';
+import './App.css';
 //import{ contacts }from './data/contact-detail'; to fetch the data locally saved in the .ts file
 
 const data = new Array(390).fill(0).map((d, id) => ({ id }));
@@ -31,7 +33,10 @@ const AnimatedRoutes: React.FC = () => {
       <AnimatePresence>
         <Navbar/>
         <Routes location={location} key={location.pathname}>
-          <Route path="/home" element={<Transitions> <Home /></Transitions> }/>
+          <Route path="/home" element={<Transitions> 
+            <ThemeSelector /> {/* Navbar as a fature to implement everywhere  */}
+            <Home /> 
+            </Transitions> }/>
           <Route path="/add-contact" element={ <Transitions> <AddContact /> </Transitions> } />
           <Route path="/contact/:name" element={ <Transitions> <ContactDetails /> </Transitions>} />
           {/*handling the case where no contact name is provided */}

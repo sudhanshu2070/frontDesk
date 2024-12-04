@@ -38,3 +38,33 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+
+/* For the theme (Dec-05) 
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: #42a5f5;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+For the theme (Dec-05) */
