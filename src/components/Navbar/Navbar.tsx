@@ -18,6 +18,8 @@ const Navbar: React.FC = () => {
       divToBlur = document.querySelector('.page-background'); // Add Contact
     } else if (location.pathname === "/contact") {
       divToBlur = document.querySelector('.slider-container'); // View Contact
+    } else if(location.pathname === "/theme"){
+      divToBlur = document.querySelector('.theme-selector-container'); // Theme
     }
     else{
       return false;
@@ -107,6 +109,15 @@ const Navbar: React.FC = () => {
             }}
             >Cool Stuff</Link>
           </li>
+
+          <li>
+            <Link to="/theme" onClick={() => {
+              toggleMenuVisibility(false) ;
+              applyBlur(false); // Remove blur when mouse leaves
+            }}
+            >Theme</Link>
+          </li>
+
           <li>
             <Link to="/" onClick={() => {
               toggleMenuVisibility(false) ;

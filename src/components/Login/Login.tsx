@@ -27,8 +27,6 @@ const Login: React.FC = () => {
       // const response = await axios.post('http://localhost:5000/api/login', formData);
       const response = await axios.post('https://thewire-salvatores-projects-9d7f38e8.vercel.app/api/login', formData);
       alert('Login successful');
-      console.log("Response:", response.data);
-      console.log("token from the api:", response.data.token);
       
       // Optionally, save the token in localStorage or state management
       localStorage.setItem('authToken', response.data.token);

@@ -1,0 +1,73 @@
+.theme-selector-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #76ABAE, #222831);
+    overflow: hidden;
+  }
+  
+  .theme-selector-content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .theme-selector-content h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #222831;
+  }
+  
+  .theme-options,
+  .theme-customizer {
+    margin: 20px 0;
+  }
+  
+  .theme-dropdown {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  .custom-input {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    align-items: flex-start;
+  }
+  
+  .custom-input label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #222831;
+  }
+  
+  .custom-input input[type="color"] {
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .save-theme-btn {
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .save-theme-btn:hover {
+    background-color: #218838;
+  }  

@@ -33,10 +33,7 @@ const AnimatedRoutes: React.FC = () => {
       <AnimatePresence>
         <Navbar/>
         <Routes location={location} key={location.pathname}>
-          <Route path="/home" element={<Transitions> 
-            <ThemeSelector /> {/* Navbar as a fature to implement everywhere  */}
-            <Home /> 
-            </Transitions> }/>
+          <Route path="/home" element={<Transitions> <Home /> </Transitions> }/>
           <Route path="/add-contact" element={ <Transitions> <AddContact /> </Transitions> } />
           <Route path="/contact/:name" element={ <Transitions> <ContactDetails /> </Transitions>} />
           {/*handling the case where no contact name is provided */}
@@ -59,6 +56,7 @@ const AnimatedRoutes: React.FC = () => {
 
           <Route path="/" element={ <Transitions><Login /></Transitions> } />
           <Route path="/signup" element={ <Transitions><SignUp /></Transitions> } />  
+          <Route path="/theme" element={ <Transitions> <ThemeSelector /> </Transitions> } />  
 
         </Routes>
       </AnimatePresence>

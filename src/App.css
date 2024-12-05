@@ -40,7 +40,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 
 
-/* For the theme (Dec-05) 
+/* For the theme changing  */
 
 :root {
   --bg-color: #ffffff;
@@ -67,4 +67,4 @@ button:hover {
   color: var(--bg-color);
 }
 
-For the theme (Dec-05) */
+/*For the theme changing */
