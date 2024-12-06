@@ -1,201 +1,193 @@
 /* Overall container */
 .theme-selector-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
-    backdrop-filter: blur(5px); /* Glassy effect */
-  }
-  
-  /* Popup card */
-  .theme-selector-popup {
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    height: 77%;
-    background: linear-gradient(145deg, #ffffff, #f3f3f3);
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 0.6s ease-in-out;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  /* Sidebar with buttons */
-  .theme-selector-sidebar {
-    width: 40%;
-    background: #27293d; /* Dark stylish background */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    border-right: 2px solid #44475a;
-  }
-  
-  .theme-toggle-btn {
-    width: 95%;
-    padding: 15px;
-    margin-bottom: 15px;
-    font-size: 18px;
-    color: white;
-    background: linear-gradient(145deg, #3c3e54, #27293d);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.2s, background 0.3s ease-in-out;
-  }
-  
-  .theme-toggle-btn.active {
-    background: #007bff; /* Highlight active button */
-    color: white;
-    transform: scale(1.1);
-  }
-  
-  .theme-toggle-btn:hover {
-    background: linear-gradient(145deg, #495061, #3c3e54);
-  }
-  
-  /* Content Area */
-  .theme-selector-content {
-    flex-grow: 1;
-    padding: 30px;
-    overflow-y: auto;
-    position: relative;
-    animation: slideIn 0.4s ease-in-out;
-  }
-  
-  .theme-selector-content h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #27293d;
-    font-weight: 600;
-  }
-  
-  /* Inputs for customization */
-  .custom-input {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-  
-  .custom-input label {
-    font-size: 16px;
-    margin-bottom: 8px;
-    color: #44475a;
-  }
-  
-  .custom-input input,
-  .custom-input select {
-    padding: 10px;
-    font-size: 14px;
-    border: 2px solid #d1d1d1;
-    border-radius: 8px;
-    outline: none;
-    transition: border-color 0.3s;
-  }
-  
-  .custom-input input:focus,
-  .custom-input select:focus {
-    border-color: #007bff;
-  }
-  
-  /* CTA Button */
-  .save-theme-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 25px;
-    background: linear-gradient(145deg, #ff6f61, #ff3d41); /* Contrasting CTA color */
-    color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 6px 15px rgba(255, 111, 97, 0.4);
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .save-theme-btn:hover {
-    background: linear-gradient(145deg, #ff3d41, #ff6f61);
-    transform: scale(1.05);
-  }
-  
-  /* Animations for smooth transitions */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: scale(0.9);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }  
-/* Add general animation styles */
-.theme-selector-content {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  backdrop-filter: blur(8px); /* Glassy effect */
+  animation: fadeInBackground 0.8s ease-in-out;
+}
+
+/* Popup card */
+.theme-selector-popup {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: 77%;
+  background: linear-gradient(145deg, #ffffff, #f3f3f3);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  animation: popupEntrance 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   overflow: hidden;
+  position: relative;
 }
 
-.theme-selector-content h3,
-.theme-selector-content .custom-input,
-.theme-selector-content .save-theme-btn {
-  opacity: 0;
-  transform: translateX(50px); /* Offset from the right */
-  animation: fadeInSlide 0.6s ease-out forwards;
+/* Sidebar with buttons */
+.theme-selector-sidebar {
+  width: 40%;
+  background: #27293d; /* Dark stylish background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-right: 2px solid #44475a;
+  animation: slideInLeft 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-/* Stagger animation delays */
+.theme-toggle-btn {
+  width: 95%;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: white;
+  background: linear-gradient(145deg, #3c3e54, #27293d);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-toggle-btn.active {
+  background: #007bff; /* Highlight active button */
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+}
+
+.theme-toggle-btn:hover {
+  background: linear-gradient(145deg, #495061, #3c3e54);
+  transform: scale(1.05);
+}
+
+/* Content Area */
+.theme-selector-content {
+  flex-grow: 1;
+  padding: 30px;
+  overflow-y: auto;
+  position: relative;
+  animation: fadeInSlide 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
 .theme-selector-content h3 {
-  animation-delay: 0.2s;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #27293d;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(30px); /* Slide up effect */
+  animation: fadeUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.2s;
 }
 
-.theme-selector-content .custom-input:nth-child(2) {
+/* Inputs for customization */
+.custom-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.custom-input:nth-child(2) {
   animation-delay: 0.4s;
 }
 
-.theme-selector-content .custom-input:nth-child(3) {
+.custom-input:nth-child(3) {
   animation-delay: 0.6s;
 }
 
-.theme-selector-content .custom-input:nth-child(4) {
+.custom-input:nth-child(4) {
   animation-delay: 0.8s;
 }
 
-.theme-selector-content .save-theme-btn {
-  animation-delay: 1s;
+.custom-input label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #44475a;
 }
 
-/* Animation keyframes */
-@keyframes fadeInSlide {
+.custom-input input,
+.custom-input select {
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid #d1d1d1;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.custom-input input:focus,
+.custom-input select:focus {
+  border-color: #007bff;
+}
+
+/* CTA Button */
+.save-theme-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 25px;
+  background: linear-gradient(145deg, #ff6f61, #ff3d41); /* Contrasting CTA color */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 111, 97, 0.4);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards 1s;
+  transition: all 0.3s ease-in-out;
+}
+
+.save-theme-btn:hover {
+  background: linear-gradient(145deg, #ff3d41, #ff6f61);
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(255, 61, 65, 0.4);
+}
+
+/* Animations */
+@keyframes fadeInBackground {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(8px);
+  }
+}
+
+@keyframes popupEntrance {
   0% {
     opacity: 0;
-    transform: translateX(50px); /* Start slightly offscreen */
+    transform: scale(0.8);
   }
   100% {
     opacity: 1;
-    transform: translateX(0); /* Slide to original position */
+    transform: scale(1);
   }
 }
 
-/* Add hover effects for better interaction */
-.theme-selector-content .save-theme-btn {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.theme-selector-content .save-theme-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
