@@ -9,13 +9,15 @@ type Theme = {
 
 const ThemeSelector: React.FC = () => {
   const [currentView, setCurrentView] = useState<'site' | 'navbar'>('site');
-  const [currentTheme, setCurrentTheme] = useState<string>('light');
+  const [currentTheme] = useState<string>('light');
   const [customTheme, setCustomTheme] = useState<Theme>({});
   const [navbarTheme, setNavbarTheme] = useState<Theme>({
     '--navbar-bg-color': '#ffffff',
     '--navbar-text-color': '#000000',
     '--navbar-font-style': 'normal',
   });
+
+  const [contentKey, setContentKey] = useState(0); // Key to re-trigger animations
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('customTheme');
@@ -46,6 +48,11 @@ const ThemeSelector: React.FC = () => {
     alert('Themes saved!');
   };
 
+  const switchView = (view: 'site' | 'navbar') => {
+    setCurrentView(view);
+    setContentKey((prevKey) => prevKey + 1); // Increment key to re-trigger animation
+  };
+
   return (
     <div className="theme-selector-container">
       <div className="theme-selector-popup">
@@ -53,20 +60,20 @@ const ThemeSelector: React.FC = () => {
         <div className="theme-selector-sidebar">
           <button
             className={`theme-toggle-btn ${currentView === 'site' ? 'active' : ''}`}
-            onClick={() => setCurrentView('site')}
+            onClick={() => switchView('site')}
           >
             Site Theme
           </button>
           <button
             className={`theme-toggle-btn ${currentView === 'navbar' ? 'active' : ''}`}
-            onClick={() => setCurrentView('navbar')}
+            onClick={() => switchView('navbar')}
           >
             Navbar Theme
           </button>
         </div>
 
         {/* Content */}
-        <div className="theme-selector-content">
+        <div key={contentKey} className="theme-selector-content">
           {currentView === 'site' && (
             <>
               <h3>Customize Site Theme</h3>
