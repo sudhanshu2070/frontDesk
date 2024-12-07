@@ -191,3 +191,49 @@
     transform: translateY(0);
   }
 }
+
+/* Color Button Styles */
+.custom-input input[type="color"] {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  background-color: #ffffff; /* Default color */
+}
+
+.custom-input input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+.custom-input input[type="color"]:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Update Button Background Color */
+.custom-input input[type="color"]:focus-visible,
+.custom-input input[type="color"]:active {
+  outline: none;
+  box-shadow: 0 0 10px 4px rgba(0, 123, 255, 0.4); /* Glow effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .custom-input input[type="color"] {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-input input[type="color"] {
+    width: 40px;
+    height: 40px;
+  }
+}

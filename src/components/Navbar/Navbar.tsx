@@ -115,7 +115,7 @@ const Navbar: React.FC = () => {
               toggleMenuVisibility(false) ;
               applyBlur(false); // Remove blur when mouse leaves
             }}
-            >Theme</Link>
+            >Themes</Link>
           </li>
 
           <li>
