@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; 
 import { predefinedThemes } from '../../utils/themes';
 import { applyTheme } from '../../utils/themeUtils';
 import './ThemeSelector.css';
@@ -18,6 +19,7 @@ const ThemeSelector: React.FC = () => {
   });
 
   const [contentKey, setContentKey] = useState(0); // Key to re-trigger animations
+  const navigate = useNavigate(); // Initializing navigation
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('customTheme');
@@ -53,9 +55,17 @@ const ThemeSelector: React.FC = () => {
     setContentKey((prevKey) => prevKey + 1); // Increment key to re-trigger animation
   };
 
+  const closePopup = () => {
+    console.log("hey there");
+    alert('Close button clicked!'); // Test
+    navigate('/home'); // Redirect to the home page
+  };
+  
+
   return (
     <div className="theme-selector-container">
-      <div className="theme-selector-popup">
+      <div className="theme-selector-popup">          
+
         {/* Sidebar */}
         <div className="theme-selector-sidebar">
           <button
@@ -74,6 +84,13 @@ const ThemeSelector: React.FC = () => {
 
         {/* Content */}
         <div key={contentKey} className="theme-selector-content">
+
+          {/* Close Button */}
+
+          <button className="close-popup-btn" onClick={closePopup}>
+            &times;    
+          </button>
+
           {currentView === 'site' && (
             <>
               <h3>Customize Site Theme</h3>

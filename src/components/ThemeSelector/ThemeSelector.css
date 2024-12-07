@@ -237,3 +237,25 @@
     height: 40px;
   }
 }
+
+.close-popup-btn {
+  position: absolute;
+  margin-top: -15px;
+  margin-left: 285px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  width: 1.4rem;
+  padding: 0.1px;
+  border-radius: 15px !important;
+}
+
+.close-popup-btn:hover {
+  background: #007bff;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+    text: "home";
+}
