@@ -242,20 +242,38 @@
   position: absolute;
   margin-top: -15px;
   margin-left: 285px;
-  background: none;
-  border: none;
-  font-size: 24px;
+  background: transparent; /* Keep it clean and minimalist */
+  border: 2px solid #6c757d; /* Vintage neutral tone for the border */
+  font-size: 20px; /* Adjust font size for elegance */
   cursor: pointer;
-  color: #333;
-  width: 1.4rem;
-  padding: 0.1px;
-  border-radius: 15px !important;
+  color: #6c757d; /* Muted, classy color */
+  width: 1.8rem; /* Balanced dimensions for better clickability */
+  height: 1.8rem; /* Ensure a circular shape */
+  padding: 0;
+  border-radius: 50%; /* Circular for a sleek look */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the icon/text */
+  transition: all 0.3s ease-in-out; /* Smooth animations for hover effects */
 }
 
 .close-popup-btn:hover {
-  background: #007bff;
-    color: white;
-    transform: scale(1.1);
-    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
-    text: "home";
+  background: #f4f4f4; /* Subtle vintage paper-like background */
+  color: #6c757d; /* Maintain consistent color for vintage look */
+  border-color: #007bff; /* Highlight with a modern accent */
+  transform: scale(1.2) rotate(-5deg); /* Slight rotation for a playful touch */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+}
+
+.close-popup-btn:before {
+  content: "×"; /* A classic close icon */
+  font-family: 'Times New Roman', serif; /* Vintage typography */
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.close-popup-btn:focus {
+  outline: none; /* Avoid default focus styling */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Modern focus ring */
 }
