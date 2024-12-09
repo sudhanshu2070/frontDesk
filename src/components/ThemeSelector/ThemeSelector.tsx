@@ -87,7 +87,7 @@ const ThemeSelector: React.FC = () => {
 
           {/* Close Button */}
 
-          <button className="close-popup-btn" onClick={closePopup}>
+          <button className="close-popup-btn" onClick={closePopup} title="Close and back to home">
             &times;    
           </button>
 
