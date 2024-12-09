@@ -56,8 +56,6 @@ const ThemeSelector: React.FC = () => {
   };
 
   const closePopup = () => {
-    console.log("hey there");
-    alert('Close button clicked!'); // Test
     navigate('/home'); // Redirect to the home page
   };
   
@@ -87,7 +85,7 @@ const ThemeSelector: React.FC = () => {
 
           {/* Close Button */}
 
-          <button className="close-popup-btn" onClick={closePopup} title="Close and back to home">
+          <button className="close-popup-btn" onClick={closePopup} title="Close and Back to home">
             &times;    
           </button>
 
