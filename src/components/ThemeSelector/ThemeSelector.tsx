@@ -52,11 +52,11 @@ const ThemeSelector: React.FC = () => {
 
   const switchView = (view: 'site' | 'navbar') => {
     setCurrentView(view);
-    setContentKey((prevKey) => prevKey + 1); // Increment key to re-trigger animation
+    setContentKey((prevKey) => prevKey + 1); // Incrementing key to re-trigger animation
   };
 
   const closePopup = () => {
-    navigate('/home'); // Redirect to the home page
+    navigate('/home'); // Redirecting to the home page
   };
   
 

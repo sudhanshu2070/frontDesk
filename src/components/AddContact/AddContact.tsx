@@ -22,7 +22,6 @@ const AddContact: React.FC = () => {
 
   const pagebgImg = "./images/philippe-mignot.jpg";
   const addContactBgImg = "./images/ben-bouvier-farrell.jpg"; 
-  console.log("token from the local storage:", localStorage.getItem('authToken'));
   
   const token = localStorage.getItem('authToken'); // fetching the JWT token stored in local storage
 
