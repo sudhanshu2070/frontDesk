@@ -1,13 +1,37 @@
 /* Overall container */
 .theme-selector-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.8); /* Dark overlay */
-  backdrop-filter: blur(8px); /* Glassy effect */
-  animation: fadeInBackground 0.8s ease-in-out;
+  background-color: #5B6057; 
+  background-image: radial-gradient(circle at 25px 25px, 
+                                    rgba(21, 17, 53, 0.7) 15%, 
+                                    rgba(53, 15, 15, 0.4) 60%, 
+                                    transparent 90%); 
+  background-size: 2000px 1000px; /* Adjust spacing for the pattern */
 }
+
+/* Adding a subtle gloss effect */
+.theme-selector-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(45deg, rgba(12, 9, 29, 0.3) 25%, transparent 25%),
+                    linear-gradient(315deg, rgba(18, 13, 44, 0.3) 25%, transparent 25%);
+  background-size: 30px 20px;
+  opacity: 0.4; 
+  pointer-events: none;
+}
+
+
 
 /* Popup card */
 .theme-selector-popup {

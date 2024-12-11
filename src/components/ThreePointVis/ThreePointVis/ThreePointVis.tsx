@@ -49,7 +49,6 @@ const ThreePointVis: React.FC<ThreePointVisProps> = ({ data }) => {
   const totalCylinders = 370;
   //const cylindersPerRow = Math.ceil(Math.sqrt(totalCylinders)); // Calculate based on total cylinders
   const cylindersPerRow = 30;
-  console.log("cylindersPerRow", cylindersPerRow);
   const spacing = 0.575; // Space between cylinders
   const cylinderSize = 0.25; // Radius of the cylinder
   

@@ -35,7 +35,6 @@ const AddContact: React.FC = () => {
   const handleSubmit = async () => {
     try {
       //await axios.post('http://localhost:5000/api/contacts', formData, {
-      console.log(formData);
       
       await axios.post('https://thewire-salvatores-projects-9d7f38e8.vercel.app/api/saveContacts', formData, {
         headers: {
@@ -45,7 +44,7 @@ const AddContact: React.FC = () => {
       setSuccessMessage('Contact added successfully.');
       setTimeout(() => {
         setSuccessMessage(null);
-        navigate('/home'); // Navigate after hiding the message
+        navigate('/home'); // Navigating after hiding the message
       }, 1000); // Delay navigation for 1 seconds to allow message to be visible
     } catch (error) {
       console.error("There was an error adding the contact!", error);
