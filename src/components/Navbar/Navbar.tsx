@@ -150,9 +150,19 @@ const Navbar: React.FC = () => {
             <span className="sparkle"></span>
             <span className="sparkle"></span>
           </div>
-          <div className="sky-message">
-            Don't worry Mate, It all will be good 😊.
-          </div>
+
+          <svg className="curved-text-svg" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+          <path
+            id="curve"
+            d="M50,300 Q600,50 1150,300"  // Defines the curved path
+            fill="transparent"
+            />
+              <text className="curved-text">
+                <textPath href="#curve" startOffset="50%">
+                  Don't worry Mate, It all will be good 😊.
+                </textPath>
+            </text>
+          </svg>
         </div>
       )}
     </div>

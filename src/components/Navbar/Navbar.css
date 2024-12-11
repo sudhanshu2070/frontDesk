@@ -125,6 +125,18 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  overflow: hidden; /* Prevent scrollbars */
+}
+.curved-text-svg {
+  width: 100%;
+  height: auto;
+}
+
+.curved-text {
+  font-size: 2.5rem; /* Adjust font size as needed */
+  font-family: "Pacifico", cursive; /* Use a cool font style */
+  fill: white; /* Text color */
+  text-anchor: middle; /* Center the text along the path */
 }
 
 /* Firecracker animations */
@@ -139,11 +151,11 @@
 .sparkle {
   display: inline-block;
   width: 15px;
-  height: 10px;
+  height: 15px;
   margin: 5px;
   background-color: #ff4f4f;
   border-radius: 50%;
-  animation: sparkle 0.5s infinite ease-out;
+  animation: sparkle 1s infinite;
 }
 
 .sparkle:nth-child(2) {
@@ -223,3 +235,4 @@
     transform: scale(1.1);
   }
 }
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
