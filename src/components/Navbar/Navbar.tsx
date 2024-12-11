@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar: React.FC = () => {
   const location = useLocation();
+  const [showMessage, setShowMessage] = useState(false);
+
 
   // Don't show the navbar on login and signup pages
   const hideNavbar = location.pathname === "/" || location.pathname === "/signup";
@@ -51,6 +53,13 @@ const Navbar: React.FC = () => {
   if (hideNavbar) {
     return null;
   }
+
+  const handleClick = () => {
+    setShowMessage(true);
+    setTimeout(() => {
+      setShowMessage(false); // Hide the message after a few seconds
+    }, 5000); // Adjust the duration of the message display
+  };
 
   return (
     <div className="navbar-container">
@@ -128,9 +137,26 @@ const Navbar: React.FC = () => {
         </ul>
 
         {/* Footer */}
-        <div className="navbar-footer">Keep Smiling 😊</div>
+        <div className="navbar-footer" onClick={()=>{
+          handleClick(); 
+          toggleMenuVisibility(false);
+        }}> Keep Smiling 😊 </div>
       </div>
+      {showMessage && (
+        <div className="surprise-container">
+          <div className="firecrackers">
+            {/* Firecracker animations */}
+            <span className="sparkle"></span>
+            <span className="sparkle"></span>
+            <span className="sparkle"></span>
+          </div>
+          <div className="sky-message">
+            Don't worry Mate, It all will be good 😊.
+          </div>
+        </div>
+      )}
     </div>
+    
   );
 };
 

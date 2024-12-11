@@ -111,3 +111,115 @@
   color: #fff; /* Light text color on hover */
   background-color: #444; /* Darker background on hover */
 }
+
+/* Surprise container */
+.surprise-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black; /* Set background to black */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Firecracker animations */
+.firecrackers {
+  /* position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%); */
+  margin: 20px 0;
+}
+
+.sparkle {
+  display: inline-block;
+  width: 15px;
+  height: 10px;
+  margin: 5px;
+  background-color: #ff4f4f;
+  border-radius: 50%;
+  animation: sparkle 0.5s infinite ease-out;
+}
+
+.sparkle:nth-child(2) {
+  background-color: #ffd700;
+  animation-delay: 0.2s;
+}
+
+.sparkle:nth-child(3) {
+  background-color: #00ff00;
+  animation-delay: 0.4s;
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+/* Sky message style */
+.sky-message {
+  /* position: relative;
+  font-size: 24px;
+  color: white;
+  background: linear-gradient(to bottom, #87ceeb, #1e90ff);
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 50px;
+  animation: fadeInOut 5s forwards; */
+  font-size: 3rem; /* Larger font size for emphasis */
+  color: white; /* Set the message color to white */
+  text-align: center;
+  animation: fadeInOut 5s forwards;
+}
+
+/* @keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+} */
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
