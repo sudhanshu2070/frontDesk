@@ -57,8 +57,8 @@ const Navbar: React.FC = () => {
   const handleClick = () => {
     setShowMessage(true);
     setTimeout(() => {
-      setShowMessage(false); // Hide the message after a few seconds
-    }, 5000); // Adjust the duration of the message display
+      setShowMessage(false); // Hiding the message after a few seconds
+    }, 5500); // Duration of the message display
   };
 
   return (
@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
 
       {/* Navbar Menu */}
       <div className="navbar-menu"
-        onMouseEnter={() => { applyBlur(true)}} // Apply blur when mouse enters
+        onMouseEnter={() => { applyBlur(true)}} // Applying blur when mouse enters
         onMouseLeave={() => {
           toggleMenuVisibility(false); // Close menu
           applyBlur(false); // Remove blur when mouse leaves
@@ -94,27 +94,27 @@ const Navbar: React.FC = () => {
           <li>
           <Link to="/home" onClick={() => {
             toggleMenuVisibility(false) ;
-            applyBlur(false); // Remove blur when mouse leaves
+            applyBlur(false); // Removing blur when mouse leaves
           }}>Home</Link>
           </li>
           <li>
             <Link to="/add-contact" onClick={() => {
               toggleMenuVisibility(false) ;
-              applyBlur(false); // Remove blur when mouse leaves
+              applyBlur(false); 
             }}
             >Add Contact</Link>
           </li>
           <li>
             <Link to="/contact" onClick={() => {
               toggleMenuVisibility(false) ;
-              applyBlur(false); // Remove blur when mouse leaves
+              applyBlur(false);
             }}
             >View Contacts</Link>
           </li>
           <li>
             <Link to="/cool-stuff" onClick={() => {
               toggleMenuVisibility(false) ;
-              applyBlur(false); // Remove blur when mouse leaves
+              applyBlur(false); 
             }}
             >Cool Stuff</Link>
           </li>
@@ -122,7 +122,7 @@ const Navbar: React.FC = () => {
           <li>
             <Link to="/theme" onClick={() => {
               toggleMenuVisibility(false) ;
-              applyBlur(false); // Remove blur when mouse leaves
+              applyBlur(false); 
             }}
             >Themes</Link>
           </li>
@@ -130,7 +130,7 @@ const Navbar: React.FC = () => {
           <li>
             <Link to="/" onClick={() => {
               toggleMenuVisibility(false) ;
-              applyBlur(false); // Remove blur when mouse leaves
+              applyBlur(false);
             }}
             >Log Out</Link>
           </li>
@@ -151,10 +151,10 @@ const Navbar: React.FC = () => {
             <span className="sparkle"></span>
           </div>
 
-          <svg className="curved-text-svg" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+          <svg className="curved-text-svg" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
           <path
             id="curve"
-            d="M50,300 Q600,50 1150,300"  // Defines the curved path
+            d="M50,300 Q600,50 1150,300"  // Defines the curved path(x,y,x,y,x,y -> Coordinates)
             fill="transparent"
             />
               <text className="curved-text">
