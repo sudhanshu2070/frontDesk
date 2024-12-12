@@ -133,7 +133,7 @@
 }
 
 .curved-text {
-  font-size: 4rem; /* Adjust font size as needed */
+  font-size: 3.75rem; /* Adjust font size as needed */
   font-family: "Pacifico", cursive; /* Use a cool font style */
   fill: white; /* Text color */
   text-anchor: middle; /* Center the text along the path */

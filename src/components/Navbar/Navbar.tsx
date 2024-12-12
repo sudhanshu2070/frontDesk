@@ -159,7 +159,7 @@ const Navbar: React.FC = () => {
             />
               <text className="curved-text">
                 <textPath href="#curve" startOffset="50%"> {/*to set where the text in the curve will start from*/}
-                  Don't worry Mate, It all will be good 😊.
+                  Don't worry Mate, It all will be good 😊...
                 </textPath>
             </text>
           </svg>
